@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  front: MyString
+  front_img: MyString
+  back: MyString
+  back_img: MyString
+  recipient_id: MyString
+
+two:
+  user_id: 1
+  front: MyString
+  front_img: MyString
+  back: MyString
+  back_img: MyString
+  recipient_id: MyString
