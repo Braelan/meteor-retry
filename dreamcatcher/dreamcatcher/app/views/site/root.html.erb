@@ -2,7 +2,7 @@
   <%= @user ?  @user.name : nil %>
 
 <form class="sign-up" action="/api/users" method="post">
-  sign up
+  sign up (currently in root.html.erb)
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <input type="text" name="user[name]" value="" placeholder="name">
   <input type="password" name="user[password]" value="" placeholder="password">

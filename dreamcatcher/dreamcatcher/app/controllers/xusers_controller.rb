@@ -1,7 +1,7 @@
 class XusersController < ApplicationController
   def create
     @xuser = Xuser.create({:zodiac =>params[:zodiac]})
-    render :new
+    render :text "created an xuser"
   end
 
   private

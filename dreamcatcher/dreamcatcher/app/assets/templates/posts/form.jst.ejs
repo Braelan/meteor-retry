@@ -1,0 +1,9 @@
+
+from form.jst.ejs
+<form class="new-post" action="index.html" method="post">
+  front
+  <input type="textarea" name="post[front]" value="<%= post.escape('front') %>">
+  back
+  <input type="textarea" name="post[back]" value="<%= post.escape('back') %>">
+  <input type="submit">
+</form>

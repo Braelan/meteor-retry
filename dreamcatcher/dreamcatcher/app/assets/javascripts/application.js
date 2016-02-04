@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
-//= jquery.serializeJSON
+//= require jquery.serializeJSON
 //= require_tree ../templates
 //= require dreamcatcher
 //= require composite_view
