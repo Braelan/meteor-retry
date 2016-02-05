@@ -12,6 +12,7 @@ class Api::UsersController < ApplicationController
       end
     end
       flash.now[:errors] = flash.now[:errors] ? flash.now[:errors] : @user.errors.full_messages
+
   end
 
   private

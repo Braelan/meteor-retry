@@ -23,6 +23,14 @@ class SessionsController < ApplicationController
     redirect_to '/'
   end
 
+  def show
+    @current_user = current_user
+    if @current_user
+      render "show.json"
+    else render :json => {}.to_json
+    end
+  end
+
   private
 
   def session_params

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :posts
     resources :recipients, only: [ :create]
     end
-    resource :session, only: [:create, :destroy]
+    resource :session, only: [:create, :destroy, :show]
     resource :xusers, only: [:create]
   end
   # The priority is based upon order of creation: first created -> highest priority.

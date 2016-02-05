@@ -1,0 +1,23 @@
+<% var name = current_user.escape('name') %>
+<% if (name !== 'undefined') { %>
+<%= name %>
+<% } %>
+<form class="sign-up-form" >
+  sign up (now in signin.jst.ejs)
+  <input type="text" name="user[name]" value="" placeholder="name">
+  <input type="password" name="user[password]" value="" placeholder="password">
+  <input type="password" name="user[password_confirmation]" value="" placeholder="password_confirmation">
+  <input type="submit" class="sign-up" name="name" value="submit">
+</form>
+
+<form class="sign-out-form" action="/session" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" class="sign-out" name="name" value="Logout"></input>
+
+</form>
+
+<form class="sign-in-form" action="/session" method="post">
+  <input type="text" name="user[name]" value="" placeholder="name">
+  <input type="text" name="user[password]" value="" placeholder="password">
+  <input type="submit" class="sign-in" name="name" value="Sign in">
+</form>

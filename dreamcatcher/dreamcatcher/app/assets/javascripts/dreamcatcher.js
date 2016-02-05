@@ -16,7 +16,7 @@ window.DreamCatcher = {
       }
     }
   )
-    new DreamCatcher.Routers.Router({$rootEl: $('div')});
+    new DreamCatcher.Routers.Router({$rootEl: $('div'), $header: $('.current_user')});
     Backbone.history.start();
     console.log("DreamCatcher.js online")
   }

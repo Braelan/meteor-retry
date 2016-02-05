@@ -1,30 +1,12 @@
 <h1>DreamCatcher<h1>
-  <%= @user ?  @user.name : nil %>
+  <!-- can do erb with @user here-->
+  <header class="current_user">
 
-<form class="sign-up" action="/api/users" method="post">
-  sign up (currently in root.html.erb)
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="text" name="user[name]" value="" placeholder="name">
-  <input type="password" name="user[password]" value="" placeholder="password">
-  <input type="password" name="user[password_confirmation]" value="" placeholder="password_confirmation">
-  <input type="submit" name="name" value="submit">
-</form>
+  </header>
 
-<form class="sign-out" action="/session" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="submit" name="name" value="Logout"></input>
 
-</form>
 
-<form class="sign-in" action="/session" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="text" name="user[name]" value="" placeholder="name">
-  <input type="text" name="user[password]" value="" placeholder="password">
-  <input type="submit" name="name" value="Sign in">
-</form>
-
-<div class="">
+<div>
 
 </div>
 

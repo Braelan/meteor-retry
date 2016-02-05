@@ -31,8 +31,6 @@ DreamCatcher.Views.PostForm = Backbone.View.extend({
           }
         }
     )
-
-
   }
 
 
