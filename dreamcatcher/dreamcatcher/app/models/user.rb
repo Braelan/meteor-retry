@@ -31,6 +31,20 @@ class User < ActiveRecord::Base
     self.session_token
   end
 
+  def self.from_omniauth(omniauth)
+    @authentication =  Authentication.from_omniauth(omniauth)
+      if @authentication
+        @user = @authentication.user
+      else
+        @user = User.create!(
+        name: omniauth['info']['nickname'],
+        password: omniauth['credentials']['secret']
+        )
+      @authentication = Authentication.create_from_omniauth(omniauth, @user)
+     end
+     @user
+  end
+
   private
 
   def ensure_session_token

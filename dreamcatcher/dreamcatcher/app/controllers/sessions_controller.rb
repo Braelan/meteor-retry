@@ -3,10 +3,8 @@ class SessionsController < ApplicationController
   before_action :require_signed_in!, only: [:destroy]
 
   def create
-    @user = User.find_by_credentials(
-    params[:user][:name],
-    params[:user][:password]
-    )
+     #raise env['omniauth.auth'].to_yaml
+    @user = omni_or_native
 
     if @user
       sign_in(@user)
@@ -17,6 +15,21 @@ class SessionsController < ApplicationController
      redirect_to '/'
     end
   end
+
+
+# will always create a user given an omniauth
+  def omni_or_native
+    if env['omniauth.auth']
+      @user = User.from_omniauth(env['omniauth.auth'])
+    else
+    @user = User.find_by_credentials(
+    params[:user][:name],
+    params[:user][:password]
+    )
+    end
+    @user
+  end
+
 
   def destroy
     sign_out
